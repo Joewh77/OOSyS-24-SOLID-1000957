@@ -1,5 +1,11 @@
 package ljmu.vets;
 
+/** Represents pets an pet types used in the program.
+ * @author Joe Whittaker
+ * @version 4.26.0
+ * @since 1.0
+*/
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
