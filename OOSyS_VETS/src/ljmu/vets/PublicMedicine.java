@@ -1,5 +1,11 @@
 package ljmu.vets;
 
+/** Represents public medicine which includes stock and prices of it.
+ * @author Joe Whittaker
+ * @version 4.26.0
+ * @since 1.0
+*/
+
 public class PublicMedicine extends SurgeryOnlyMedicine {
 	private Double publicCost;
 
