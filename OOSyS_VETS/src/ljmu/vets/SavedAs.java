@@ -1,5 +1,11 @@
 package ljmu.vets;
 
+/** Represents a saving option.
+ * @author Joe Whittaker
+ * @version 4.26.0
+ * @since 1.0
+*/
+
 public class SavedAs {
 
 public void saveAs(FileType fileType, String path) {
