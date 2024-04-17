@@ -1,5 +1,11 @@
 package ljmu.vets;
 
+/** Represents surgery option with all the functionality of it.
+ * @author Joe Whittaker
+ * @version 4.26.0
+ * @since 1.0
+*/
+
 import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
