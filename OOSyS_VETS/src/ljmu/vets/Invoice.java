@@ -1,5 +1,11 @@
 package ljmu.vets;
 
+/** Represents invoice fucntions.
+ * @author Joe Whittaker
+ * @version 4.26.0
+ * @since 1.0
+*/
+
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
