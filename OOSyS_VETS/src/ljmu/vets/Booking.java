@@ -1,5 +1,11 @@
 package ljmu.vets;
 
+/** Represents Booking functions and system.
+ * @author Joe Whittaker
+ * @version 4.26.0
+ * @since 1.0
+*/
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
