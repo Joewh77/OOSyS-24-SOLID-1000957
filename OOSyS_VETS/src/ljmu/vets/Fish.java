@@ -1,5 +1,11 @@
 package ljmu.vets;
 
+/** Represents a type of pet (fish).
+ * @author Joe Whittaker
+ * @version 4.26.0
+ * @since 1.0
+*/
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
