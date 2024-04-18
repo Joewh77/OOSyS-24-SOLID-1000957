@@ -8,6 +8,7 @@ package ljmu.vets;
 
 import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalDate; //^^ Added to allow LocalDate to function.
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -35,16 +36,17 @@ public class Surgery implements Serializable {
 
 	// ToDo : get / set Methods ?
 
+	// ToDo : Validate ? // Validation added.
 	public void makePet(Pet pet) {
-		// ToDo : Validate ?
+		if (pet != null) {
 		this.pets.add(pet);
 	}
 
-	/*
+	//^^
 	public void makePet(String name, LocalDate regDate) {
 		// ToDo : Validate ?
 	}
-	*/
+	
 
 	public Pet getPetByName(String name) {
 		// NOTE : Java SE 7 Code !
