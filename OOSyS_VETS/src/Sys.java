@@ -77,23 +77,14 @@ public class Sys {
 	}
 
 	private void deSerialize() {
-		ObjectInputStream ois;
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(PATH + "surgeries.ser"))) {
+            surgeries.addAll((List<Surgery>) ois.readObject());
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
-		try {
-			ois = new ObjectInputStream(new FileInputStream(PATH + "surgeries.ser"));
-
-			// NOTE : Erasure Warning !
-			this.surgeries = (List<Surgery>)ois.readObject();
-
-			// ToDo : Finally ?
-			ois.close();
-		}
-		catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
-
-	private void serialize() {
+    private void serialize() {
 		ObjectOutputStream oos;
 
 		try {
