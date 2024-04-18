@@ -18,6 +18,11 @@ public class Fish extends Pet {
 		this.waterType = waterType;
 	}
 
+	// Get method added for breeding.
+	public WaterType getwaterType() {
+		return waterType;
+	}
+
 	@Override
 	public String toString() {
 		return this.getClass().getSimpleName() + " >> " +
