@@ -17,6 +17,11 @@ public class Cat extends Pet {
 
 		this.breeding = breeding;
 	}
+	
+	// Get method added for breeding.
+	public Breeding getBreeding() {
+		return breeding;
+	}
 
 	@Override
 	public String toString() {
