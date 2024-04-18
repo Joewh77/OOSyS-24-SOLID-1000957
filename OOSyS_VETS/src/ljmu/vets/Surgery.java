@@ -66,11 +66,12 @@ public class Surgery implements Serializable {
 		booking.getPet().makeBooking(booking);
 	}
 
-	/*
+	
 	public void makeBooking(String ref, Pet pet, LocalDateTime when) {
 		// ToDo : Validate ?
+		this.makeBooking( new Booking(ref, pet, when));
 	}
-	*/
+	
 
 	// ToDo : getBookingByRef() ?
 }

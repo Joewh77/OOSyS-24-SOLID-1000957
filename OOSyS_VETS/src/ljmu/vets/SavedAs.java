@@ -25,18 +25,21 @@ public void saveAs(FileType fileType, String path) {
 		}
 	}
 	
-	// ToDo : Private !
+	// I have added a print output text to each SaveAs options with an addition of the path it has been saved too.
 	private void saveAsDocX(String path) {
+		System.out.println("DocX has been saved to: " + path);
 		
 	}
 
 	// ToDo : Private !
 	private void saveAsXPS(String path) {
+		System.out.println("XPS has been saved to: " + path);
 		
 	}
 
 	// ToDo : Private !
 	private void saveAsPDF(String path) {
+		System.out.println("PDF has been saved to: " + path);
 		
 	}
 
