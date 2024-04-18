@@ -14,13 +14,15 @@ public class SurgeryOnlyMedicine implements Payable, Serializable {
 	protected String name;
 	protected Integer stock, lowest;
 	protected Double surgeryCost;
+	protected Double publicCost;
 	protected List<Notifiable> people = new ArrayList<Notifiable>();
 
-	public SurgeryOnlyMedicine(String name, Integer stock, Integer lowest, Double surgeryCost) {
+	public SurgeryOnlyMedicine(String name, Integer stock, Integer lowest, Double surgeryCost, Double publicCost) {
 		this.name = name;
 		this.stock = stock;
 		this.lowest = lowest;
-		this.surgeryCost = surgeryCost;
+		this.surgeryCost = surgeryCost;		
+		this.publicCost = publicCost;
 	}
 
 	public void setStock(Integer i) {
@@ -46,10 +48,18 @@ public class SurgeryOnlyMedicine implements Payable, Serializable {
 		return this.surgeryCost;
 	}
 
+	public void setSurgeryCost(Double SurgeryCost) {
+		this.surgeryCost = SurgeryCost;
+	}
+
 	@Override
 	public Double getPublicCost() throws Exception {
 		throw new Exception("ToDo");
 	}
 
-	// ToDo : get / set Methods ?
+	public void setPublicCost(Double PublicCost) {
+		this.publicCost = PublicCost;
+	}
+
+	// ToDo : get / set Methods ? // Set methods added for 2 attributes.
 }
