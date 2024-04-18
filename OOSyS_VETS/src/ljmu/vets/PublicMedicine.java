@@ -10,7 +10,7 @@ public class PublicMedicine extends SurgeryOnlyMedicine {
 	private Double publicCost;
 
 	public PublicMedicine(String name, Integer stock, Integer lowest, Double surgeryCost, Double publicCost) {
-		super(name, stock, lowest, surgeryCost);
+		super(name, stock, lowest, surgeryCost, publicCost);
 
 		this.publicCost = publicCost;
 	}
