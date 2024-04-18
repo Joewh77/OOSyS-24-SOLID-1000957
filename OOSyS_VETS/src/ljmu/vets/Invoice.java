@@ -44,3 +44,4 @@ public class Invoice implements Serializable {
 
 		return Double.parseDouble(new DecimalFormat("#.##").format(tt));
 	}
+}
