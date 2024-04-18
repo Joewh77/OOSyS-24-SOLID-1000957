@@ -17,9 +17,16 @@ public class Surgery implements Serializable {
 	private List<Pet> pets = new ArrayList<Pet>();
 	private List<Booking> bookings = Collections.synchronizedList(new ArrayList<Booking>());
 
-	public Surgery(String surgery) {
-		this.surgery = surgery;
-	}
+	// Attributes added for JUnit assertThrows
+	private String embargoDay;
+	private String DayOfWeek;
+
+	// Alter current constructor to include DayOfWeek & embargoDay
+	public Surgery(String surgery, String DayOfWeek, String embargoDay) {
+        this.surgery = surgery;
+        this.embargoDay = embargoDay;
+        this.DayOfWeek = DayOfWeek;
+    }
 
 	@Override
 	public String toString() {
