@@ -65,13 +65,18 @@ public class Surgery implements Serializable {
 		return null;
 	}
 
-	public  void makeBooking(Booking booking) {
-		// ToDo : Validate ?
-		this.bookings.add(booking);
+	public  void makeBooking(Booking booking) throws Exception {
+        // NOTE : Validate ?
+        if (booking.getWhen().getDayOfWeek().toString().equalsIgnoreCase (this.embargoDay)) {
+            this.bookings.add(booking);
+        }
+        else {
+            throw new Exception("makeBooking :(");
+        }
 
-		// ToDo Two-Way Linking ?
-		booking.getPet().makeBooking(booking);
-	}
+        // NOTE : Two-Way Linking ?
+        booking.getPet().makeBooking(booking);
+    }
 
 	
 	public void makeBooking(String ref, Pet pet, LocalDateTime when) {
