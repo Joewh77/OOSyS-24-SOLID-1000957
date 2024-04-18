@@ -177,11 +177,18 @@ public class Sys {
 		System.out.print("Pet's Name : ");
 		String name = S.nextLine();
 
-		// ToDo : Validate ?
+		// ToDo : Validate ? // Validation for getting pet by name which outputs an error message if entered incorrect.
 		Pet pet = surgery.getPetByName(name);
 
 		System.out.print("Booking's DateTime [i.e. 03 Oct 23 09:30] : ");
-		LocalDateTime when = LocalDateTime.parse(S.nextLine(), DateTimeFormatter.ofPattern("dd MMM yy HH:mm"));
+		String dateTimeInput = S.nextLine();
+		LocalDateTime when = null;
+		try {
+			when = LocalDateTime.parse(dateTimeInput, DateTimeFormatter.ofPattern("dd MMM yy HH:mm"));
+		} catch (DateTimeParseException e) {
+			System.out.println("Invalid date and time format. Please enter in the format: dd MMM yy HH:mm");
+			
+		}
 
 		System.out.print("Booking's Duration [i.e. MINS] : ");
 		Integer duration = Integer.parseInt(S.nextLine());
