@@ -24,15 +24,14 @@ public class Sys {
 
 	private List<Surgery> surgeries = new ArrayList<Surgery>();
 	private Surgery surgery;
-	private SavedSampleData ssd;
 
-	// Attempt to add any sample data given to another class (SavedSampleData) to be saved.
-	public Sys(SavedSampleData ssd) throws Exception {
+	// ToDo : Necessary ?
+	public Sys() {
 		deSerialize();
 
 		/* NOTE : Debugging !
-		surgeries.add(new Surgery("SurgeryA", DayOfWeek.THURSDAY));
-		surgeries.add(new Surgery("SurgeryB", DayOfWeek.FRIDAY));
+		surgeries.add(new Surgery("SurgeryA"));
+		surgeries.add(new Surgery("SurgeryB"));
 
 		Pet pet1 = new Cat("GlynH", LocalDate.of(2020, 11, 11), Breeding.MOGGIE);
 		surgeries.get(0).makePet(pet1);
