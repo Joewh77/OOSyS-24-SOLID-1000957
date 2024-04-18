@@ -39,10 +39,18 @@ public abstract class Pet implements Serializable {
 	public String getName() {
 		return this.name;
 	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public LocalDate getRegDate() {
 		return this.regDate;
 	}
+	
+	public void setRegDate(LocalDate regDate) {
+		this.regDate = regDate;
+	}
 
-	// ToDo : get / set Methods ?
+	// ToDo : get / set Methods ? // Get methods added for getName & getRegDate.
 }

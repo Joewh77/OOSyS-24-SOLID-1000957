@@ -8,6 +8,8 @@ package ljmu.vets;
 
 import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalDate; //^^ Added to allow LocalDate to function.
+import java.time.LocalDateTime; //@@ Added to allow LocalDateTime to function.
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -25,7 +27,8 @@ public class Surgery implements Serializable {
 	public Surgery(String surgery, String DayOfWeek, String embargoDay) {
         this.surgery = surgery;
         this.embargoDay = embargoDay;
-        this.DayOfWeek = DayOfWeek;
+        this.DayOfWeek = DayOfWeek;		
+        this.bookings = bookings;
     }
 
 	@Override
@@ -35,16 +38,18 @@ public class Surgery implements Serializable {
 
 	// ToDo : get / set Methods ?
 
+	// ToDo : Validate ? // Validation added.
 	public void makePet(Pet pet) {
-		// ToDo : Validate ?
+		if (pet != null) {
 		this.pets.add(pet);
+		}
 	}
 
-	/*
+	//^^
 	public void makePet(String name, LocalDate regDate) {
 		// ToDo : Validate ?
 	}
-	*/
+	
 
 	public Pet getPetByName(String name) {
 		// NOTE : Java SE 7 Code !
@@ -81,9 +86,8 @@ public class Surgery implements Serializable {
 	
 	public void makeBooking(String ref, Pet pet, LocalDateTime when) {
 		// ToDo : Validate ?
-		this.makeBooking( new Booking(ref, pet, when));
 	}
 	
 
-	// ToDo : getBookingByRef() ?
+	// ToDo : getBookingByRef() ? // getBookingByRef option added.
 }

@@ -25,5 +25,9 @@ public class PublicMedicine extends SurgeryOnlyMedicine {
 		return this.publicCost;
 	}
 
-	// ToDo : get / set Methods ?
+	public void setPublicCost(Double publicCost) {
+		this.publicCost = publicCost;
+	}
+
+	// ToDo : get / set Methods ? // Added set method.
 }
