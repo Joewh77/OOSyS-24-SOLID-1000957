@@ -34,18 +34,34 @@ public class Booking implements Serializable {
 	public String getRef() {
 		return this.ref;
 	}
+	
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
 
 	public Pet getPet() {
 		return this.pet;
+	}
+	
+	public void setPet(Pet pet) {
+		this.pet = pet;
 	}
 
 	public LocalDateTime getWhen() {
 		return this.when;
 	}
-
-	public Integer getDuration() {
-		return this.duration;
+	
+	public void setWhen(LocalDateTime when) {
+		this.when = when;
 	}
 
-	// ToDo : get / set Methods ?
+	public int getDuration() {
+		return this.duration;
+	}
+	
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+
+	// ToDo : get / set Methods ? // Set methods added for each Get method.
 }
