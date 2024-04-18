@@ -1,0 +1,14 @@
+package ljmu.vets;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.*;
+
+public class SavedSampleData implements Serializable {
+	private String ssd;
+	
+	public SavedSampleData(String ssd) {
+		this.ssd = ssd;
+		
+	}
+}

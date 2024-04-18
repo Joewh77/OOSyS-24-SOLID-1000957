@@ -17,9 +17,16 @@ public class Surgery implements Serializable {
 	private List<Pet> pets = new ArrayList<Pet>();
 	private List<Booking> bookings = Collections.synchronizedList(new ArrayList<Booking>());
 
-	public Surgery(String surgery) {
-		this.surgery = surgery;
-	}
+	// Attributes added for JUnit assertThrows
+	private String embargoDay;
+	private String DayOfWeek;
+
+	// Alter current constructor to include DayOfWeek & embargoDay
+	public Surgery(String surgery, String DayOfWeek, String embargoDay) {
+        this.surgery = surgery;
+        this.embargoDay = embargoDay;
+        this.DayOfWeek = DayOfWeek;
+    }
 
 	@Override
 	public String toString() {
@@ -58,13 +65,18 @@ public class Surgery implements Serializable {
 		return null;
 	}
 
-	public  void makeBooking(Booking booking) {
-		// ToDo : Validate ?
-		this.bookings.add(booking);
+	public  void makeBooking(Booking booking) throws Exception {
+        // NOTE : Validate ?
+        if (booking.getWhen().getDayOfWeek().toString().equalsIgnoreCase (this.embargoDay)) {
+            this.bookings.add(booking);
+        }
+        else {
+            throw new Exception("makeBooking :(");
+        }
 
-		// ToDo Two-Way Linking ?
-		booking.getPet().makeBooking(booking);
-	}
+        // NOTE : Two-Way Linking ?
+        booking.getPet().makeBooking(booking);
+    }
 
 	
 	public void makeBooking(String ref, Pet pet, LocalDateTime when) {
