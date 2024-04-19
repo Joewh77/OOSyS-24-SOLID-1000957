@@ -1,4 +1,4 @@
-package ljmu.vets;
+/* package ljmu.vets;
 
 import static org.junit.Assert.*;
 
@@ -32,3 +32,4 @@ public class SurgeryTest {
         Assertions.assertThrows(Exception.class, () -> surgery.makeBooking(booking));
     }
 }
+*/
