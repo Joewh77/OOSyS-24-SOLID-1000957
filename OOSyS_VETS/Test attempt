@@ -1,0 +1,38 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class SurgeryTest {
+    
+    @Test
+    public void testMakeBooking_ValidBooking_Success() {
+        // Arrange
+        Surgery surgery = new Surgery();
+        Booking booking = new Booking();
+        // Set up the booking with a day of the week that is not embargoed
+        booking.setWhen(DayOfWeek.MONDAY);
+        
+        // Act
+        try {
+            surgery.makeBooking(booking);
+            
+            // Assert
+            Assertions.assertTrue(surgery.getBookings().contains(booking));
+            Assertions.assertEquals(booking, booking.getPet().getBooking());
+        } catch (Exception e) {
+            // If an exception is thrown, fail the test
+            Assertions.fail("Exception thrown: " + e.getMessage());
+        }
+    }
+    
+    @Test
+    public void testMakeBooking_EmbargoedDay_ExceptionThrown() {
+        // Arrange
+        Surgery surgery = new Surgery();
+        Booking booking = new Booking();
+        // Set up the booking with a day of the week that is embargoed
+        booking.setWhen(DayOfWeek.SATURDAY);
+        
+        // Act and Assert
+        Assertions.assertThrows(Exception.class, () -> surgery.makeBooking(booking));
+    }
+}
