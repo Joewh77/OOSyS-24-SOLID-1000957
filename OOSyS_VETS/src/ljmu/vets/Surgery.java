@@ -84,8 +84,9 @@ public class Surgery implements Serializable {
     }
 
 	
-	public void makeBooking(String ref, Pet pet, LocalDateTime when) {
+	public void makeBooking(String ref, Pet pet, LocalDateTime when) throws Exception {
 		// ToDo : Validate ?
+		this.makeBooking( new Booking(ref,pet, when, null));
 	}
 	
 

@@ -1,0 +1,35 @@
+/* package ljmu.vets;
+
+import static org.junit.Assert.*;
+
+public class SurgeryTest {
+    
+    // Test case for valid booking
+    @Test
+    public void testMakeBooking_ValidBooking() {
+        Surgery surgery = new Surgery();
+        Booking booking = new Booking();
+        booking.setWhen(DayOfWeek.MONDAY);
+        
+        try {
+            surgery.makeBooking(booking);
+
+            // // Assertions to check if the booking is added. 
+            Assertions.assertTrue(surgery.getBookings().contains(booking));
+            Assertions.assertEquals(booking, booking.getPet().getBooking());
+        } catch (Exception e) {
+            Assertions.fail("Booking is invalid/ failed. The exception thrown is: " + e.getMessage());
+        }
+    }
+    
+    // Test case for booking on embargoed day
+    @Test
+    public void testMakeBooking_EmbargoedDay_ExceptionThrown() {
+        Surgery surgery = new Surgery();
+        Booking booking = new Booking();
+        booking.setWhen(DayOfWeek.THURSDAY);
+        
+        Assertions.assertThrows(Exception.class, () -> surgery.makeBooking(booking));
+    }
+}
+*/

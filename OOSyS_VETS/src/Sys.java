@@ -7,6 +7,7 @@
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.time.LocalDate;
@@ -34,6 +35,7 @@ public class Sys {
 		/* NOTE : Debugging !
 		surgeries.add(new Surgery("SurgeryA", DayOfWeek.THURSDAY));
 		surgeries.add(new Surgery("SurgeryB", DayOfWeek.FRIDAY));
+		*/
 
 		Pet pet1 = new Cat("GlynH", LocalDate.of(2020, 11, 11), Breeding.MOGGIE);
 		surgeries.get(0).makePet(pet1);
@@ -46,7 +48,7 @@ public class Sys {
 
 		Booking booking3 = new Booking("SurgeryA-REF3", pet1, LocalDateTime.of(2025, 11, 11, 11, 00), 90);
 		surgeries.get(0).makeBooking(booking3);
-		*/
+		
 	}
 
 	public void entryMenu() {
@@ -194,7 +196,7 @@ public class Sys {
 		System.out.print("Booking's Duration [i.e. MINS] : ");
 		Integer duration = Integer.parseInt(S.nextLine());
 
-		surgery.makeBooking(new Booking(ref, pet, when, duration));
+		//surgery.makeBooking(new Booking(ref, pet, when, duration));
 	}
 
 	private void getPetsNextBooking() {
