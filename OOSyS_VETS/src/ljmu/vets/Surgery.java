@@ -60,12 +60,11 @@ public class Surgery implements Serializable {
 			}
 		}
 
-		/* NOTE : Java SE 8 Code !
+		// NOTE : Java SE 8 Code ! // Uncommented to allow for Java SE 8 code.
 		Optional<Pet> p = this.pets.stream().filter(o -> o.getName().equals(name)).findAny();
 		if (p.isPresent()) {
 			return p.get();
 		}
-		*/
 
 		// NOTE : No Match !
 		return null;
