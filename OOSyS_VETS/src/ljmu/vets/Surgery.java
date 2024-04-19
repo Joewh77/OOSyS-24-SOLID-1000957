@@ -13,6 +13,7 @@ import java.time.LocalDateTime; //@@ Added to allow LocalDateTime to function.
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class Surgery implements Serializable {
 	private String surgery;
@@ -91,4 +92,12 @@ public class Surgery implements Serializable {
 	
 
 	// ToDo : getBookingByRef() ? // getBookingByRef option added.
+	public Booking getBookingByRef(String ref) {
+		for (Booking booking : bookings) {
+			if (booking.getRef().equals(ref)) {
+				return booking;
+			}
+		}
+		return null;
+	}
 }
