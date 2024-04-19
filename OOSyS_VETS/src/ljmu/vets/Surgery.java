@@ -91,4 +91,12 @@ public class Surgery implements Serializable {
 	
 
 	// ToDo : getBookingByRef() ? // getBookingByRef option added.
+	public Booking getBookingByRef(String ref) {
+		for (Booking booking : bookings) {
+			if (booking.getRef().equals(ref)) {
+				return booking;
+			}
+		}
+		return null;
+	}
 }
