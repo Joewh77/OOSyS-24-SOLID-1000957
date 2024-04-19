@@ -6,10 +6,10 @@
 */
 
 public class Entry {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		// Sys sys = new Sys();
 		// sys.entryMenu();
 
-		new Sys().entryMenu();
+		new Sys(null).entryMenu();
 	}
 }
