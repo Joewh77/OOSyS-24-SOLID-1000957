@@ -21,7 +21,7 @@ public class Invoice implements Serializable {
 	public Invoice(Integer no, LocalDateTime when, Double amount, List<Booking> bookings, List<Payable> payables) {
 		this.no = no;
 		this.when = when;
-		// this.amount = amount;
+		this.amount = amount;
 		this.amount = calculateAmount(bookings);
 
 		this.bookings = bookings;
